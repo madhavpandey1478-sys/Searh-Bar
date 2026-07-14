@@ -1,0 +1,70 @@
+{
+  "id": "com.madhav.searchabledropdown",
+  "version": "1.0.0",
+  "name": "Searchable Dropdown",
+  "description": "Searchable dropdown for SAC dimension members",
+  "newInstancePrefix": "SearchableDropdown",
+  "vendor": "Madhav",
+  "eula": "",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-madhav-searchable-dropdown",
+      "url": "https://YOUR-HOSTING-URL/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "default": 400
+    },
+    "height": {
+      "type": "integer",
+      "default": 48
+    },
+    "placeholder": {
+      "type": "string",
+      "default": "Required"
+    }
+  },
+  "methods": {
+    "setItems": {
+      "description": "Sets dropdown items using a JSON string",
+      "parameters": [
+        {
+          "name": "items",
+          "type": "string",
+          "description": "JSON string containing dropdown items"
+        }
+      ]
+    },
+    "getSelectedKey": {
+      "description": "Returns the selected member ID",
+      "returnType": "string"
+    },
+    "getSelectedText": {
+      "description": "Returns the selected member description",
+      "returnType": "string"
+    },
+    "setSelectedKey": {
+      "description": "Selects an item using its member ID",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "string"
+        }
+      ]
+    },
+    "clearSelection": {
+      "description": "Clears the current selection"
+    }
+  },
+  "events": {
+    "onSelectionChange": {
+      "description": "Triggered when the user selects an item"
+    }
+  }
+}
